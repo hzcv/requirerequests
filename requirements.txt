@@ -1,1 +1,4 @@
-requests
+instagrapi
+pillow
+urllib3
+aiohttp
