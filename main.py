@@ -7,14 +7,14 @@ import requests
 from getpass import getpass
 
 # ---------------- CONFIG ----------------
-OWNER_USERNAMES = ["owner_username1", "owner_username2"]
+OWNER_USERNAMES = ["owner_username1", "owner_username2"]  # Replace with real usernames
 REPLY_DELAY = 2  # seconds
 REPLY_TEXT = "OYY MSG MAT KAR"
 
 # Instagram constants
 IG_SIG_KEY = b'5ad8d30a9ba6b29f8f67b235c3e60b105d3c8d3ad99c8b5c1b2aefc63e7cddcf'
 IG_API_URL = "https://i.instagram.com/api/v1/"
-USER_AGENT = "Instagram 219.0.0.12.117 Android"
+USER_AGENT = "Instagram 321.0.0.27.119 Android (30/11; 480dpi; 1080x2340; Xiaomi; Mi 11; venus; qcom; en_US)"
 
 # HTTP session
 session = requests.Session()
@@ -22,7 +22,18 @@ session.headers.update({
     "User-Agent": USER_AGENT,
     "Accept": "*/*",
     "Accept-Encoding": "gzip, deflate",
-    "Connection": "keep-alive"
+    "Connection": "keep-alive",
+    "X-IG-App-ID": "936619743392459",
+    "X-IG-Capabilities": "3brTvw==",
+    "X-IG-Connection-Type": "WIFI",
+    "X-IG-Connection-Speed": "-1kbps",
+    "X-IG-Bandwidth-Speed-KBPS": "7000.000",
+    "X-IG-Bandwidth-TotalBytes-B": "0",
+    "X-IG-Bandwidth-TotalTime-MS": "0",
+    "X-IG-App-Locale": "en_US",
+    "X-IG-Device-Locale": "en_US",
+    "X-IG-Mapped-Locale": "en_US",
+    "X-FB-HTTP-Engine": "Liger"
 })
 
 owner_ids = []
